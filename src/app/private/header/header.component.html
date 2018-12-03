@@ -1,0 +1,43 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <span>
+          <i class="fa fa-home"></i> Admin Panel</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li [routerLinkActive]="['active']" [routerLink]="['/admin/home']">
+          <a href="javascript:;">Grid</a>
+        </li>
+        <li [routerLinkActive]="['active']" [routerLink]="['/admin/features']">
+          <a href="javascript:;">Features</a>
+        </li>
+        <li [routerLinkActive]="['active']" [routerLink]="['/admin/demo-charts']">
+          <a href="javascript:;">Charts</a>
+        </li>
+        <li [routerLinkActive]="['active']" [routerLink]="['/admin/gallery']">
+          <a href="javascript:;">Media</a>
+        </li>
+        <li [routerLinkActive]="['active']" [routerLink]="['/admin/form-loader']">
+          <a href="javascript:;">Form</a>
+        </li>
+        <li [routerLinkActive]="['active']" [routerLink]="['/admin/static-pages/about']">
+          <a href="javascript:;">Comming soon</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="javascript:;" (click)="logout()">
+            <span class="glyphicon glyphicon-log-out"></span> Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

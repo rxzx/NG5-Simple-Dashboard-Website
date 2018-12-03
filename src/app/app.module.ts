@@ -6,7 +6,6 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HTTPService } from './Providers/httpservice';
-import { PrivateModule } from './private/private.module';
 import { AlwaysAuthGuard, OnlyLoggedInUsersGuard } from './AlwaysAuthGuard ';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { StorageService } from './Providers/storageservice';
@@ -41,8 +40,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    // PublicModule,
-    // PrivateModule,
     ToastrModule.forRoot()
   ],
   exports: [

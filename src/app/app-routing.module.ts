@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
     path: '',
-    canActivate: [AlwaysAuthGuard],
+    // canActivate: [AlwaysAuthGuard],
     children: [
       { path: 'sign-in', component: PublicSigninComponent, data: { title: 'Sign In' } },
       { path: 'home', component: PublicHomeComponent, data: { state: 'home' } },

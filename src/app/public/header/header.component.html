@@ -1,0 +1,42 @@
+<header id="public-header">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span>
+                        <i class="fa fa-home"></i> System Panel</span>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li [routerLinkActive]="['active']" [routerLink]="['/home']">
+                        <a href="javascript:;">Home</a>
+                    </li>
+                    <li [routerLinkActive]="['active']" [routerLink]="['/tab-one']">
+                        <a href="javascript:;">Tab One</a>
+                    </li>
+                    <li [routerLinkActive]="['active']" [routerLink]="['/tab-two']">
+                        <a href="javascript:;">Tab Two</a>
+                    </li>
+                    <li [routerLinkActive]="['active']" [routerLink]="['/tab-three']">
+                        <a href="javascript:;">Tab Three</a>
+                    </li>
+                    <li [routerLinkActive]="['active']" [routerLink]="['/tab-four']">
+                        <a href="javascript:;">Tab Four</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="javascript:;" (click)="logout()">
+                            <span class="glyphicon glyphicon-log-out"></span> Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

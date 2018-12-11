@@ -10,37 +10,24 @@ import { AlwaysAuthGuard, OnlyLoggedInUsersGuard } from './AlwaysAuthGuard ';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { StorageService } from './Providers/storageservice';
 import { MyHttpInterceptor } from './Providers/my-http-interceptor';
-import { PublicHeaderComponent } from './header/header.component';
-import { PublicFooterComponent } from './footer/footer.component';
-import { PublicHomeComponent } from './home/home.component';
-import { PublicSigninComponent } from './signin/signin.component';
-import { TabOneComponent } from './tab-one/tab-one.component';
-import { TabTwoComponent } from './tab-two/tab-two.component';
-import { TabThreeComponent } from './tab-three/tab-three.component';
-import { TabFourComponent } from './tab-four/tab-four.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PrivateModule } from './private/private.module';
+import { PublicModule } from './public/public.module';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PublicHeaderComponent, 
-    PublicFooterComponent, 
-    PublicHomeComponent, 
-    PublicSigninComponent, 
-    TabOneComponent,
-    TabTwoComponent,
-    TabThreeComponent,
-    TabFourComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
-    ReactiveFormsModule,
-    ToastrModule.forRoot()
+    PublicModule,
+    PrivateModule,
+    ReactiveFormsModule,    ToastrModule.forRoot(),
   ],
   exports: [
     ToastrModule,
